@@ -2,9 +2,16 @@ service: puppeteer
 frameworkVersion: "=1.26.0"
 
 plugins:
+  - serverless-domain-manager
   - serverless-webpack
 
 custom:
+  customDomain:
+      domainName: apd.sunburst.io
+      basePath: api
+      certificateName: '*.sunburst.io'
+      createRoute53Record: true
+      endpointType: regional
   webpackIncludeModules: true
 
 provider:
