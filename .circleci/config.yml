@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:6.10.3
-    working_directory: ~
+    working_directory: ~/workspace
     steps:
       - checkout
 
@@ -50,12 +50,12 @@ jobs:
   deploy:
     docker:
       - image: circleci/node:6.10.3
-    working_directory: ~
+    working_directory: ~/workspace
     steps:
       - checkout
 
       - attach_workspace:
-          at: ~
+          at: ~/workspace
 
       - run:
           name: Install Deployment Dependencies
