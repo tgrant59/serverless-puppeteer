@@ -15,5 +15,9 @@ Runs Puppeteer on AWS Lambda with Serverless
 - `FUNCTION=function-name make run-local` - runs a function locally for testing
 
 ## Getting Started
+0. Install dependencies
+    - `nvm`
+    - *Optional* Install `serverless` globally
+    - *Optional* Install `watchman` for using `make test-watch`
+ 
 0. Run `make install`
-0. Run `FUNCTION=function-name make run-local`
