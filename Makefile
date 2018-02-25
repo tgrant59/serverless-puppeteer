@@ -44,7 +44,7 @@ package: check-versions node_modules
 
 .PHONY: run-local
 run-local: check-versions node_modules
-	LOCAL=true serverless invoke local --function ${FUNCTION}
+	serverless invoke local --function ${FUNCTION}
 
 # -------------- Linting --------------
 
