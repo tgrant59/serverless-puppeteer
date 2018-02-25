@@ -39,7 +39,7 @@ help:
 install: check-versions clean node_modules
 
 .PHONY: package
-build: check-versions node_modules
+package: check-versions node_modules
 	PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true serverless package
 
 .PHONY: run-local
