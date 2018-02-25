@@ -13,7 +13,7 @@ jobs:
 
       - run:
           name: Install Dependencies
-          command: make node_modules
+          command: make install-no-clean
 
       - save_cache:
           paths:

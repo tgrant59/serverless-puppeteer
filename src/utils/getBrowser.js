@@ -1,15 +1,14 @@
 import puppeteer from 'puppeteer'
 import ChromeInstaller from './chromeInstaller'
 
-const chrome = new ChromeInstaller({
-    executePath: 'headless_shell',
-    s3Bucket: 'cdn.sunburst.io',
-    s3Key: 'chrome/HeadlessChrome-66.0.3343.0.tar.gz',
-})
-
 let browser
 
 const setupBrowser = async () => {
+    const chrome = new ChromeInstaller({
+        executePath: 'headless_shell',
+        s3Bucket: 'cdn.sunburst.io',
+        s3Key: 'chrome/HeadlessChrome-66.0.3343.0.tar.gz',
+    })
     await chrome.setupChrome()
     const config = process.env.IS_LOCAL
         ? {
