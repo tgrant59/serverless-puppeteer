@@ -30,6 +30,11 @@ jobs:
           command: make test
           when: always
 
+      - run:
+          name: Package functions
+          command: make package
+          when: always
+
       - store_artifacts:
           path: artifacts
 
