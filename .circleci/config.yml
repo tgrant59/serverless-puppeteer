@@ -30,10 +30,6 @@ jobs:
           command: make test
           when: always
 
-      - run:
-          name: Build App
-          command: PROD=1 make build
-
       - store_artifacts:
           path: artifacts
 
