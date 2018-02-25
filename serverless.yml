@@ -1,0 +1,22 @@
+service: puppeteer
+frameworkVersion: "=1.26.0"
+
+plugins:
+  - serverless-webpack
+
+custom:
+  webpackIncludeModules: true
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  memorySize: 2048
+  timeout: 10
+
+functions:
+  scrape:
+    handler: src/scrape.handler
+    events:
+      - http:
+          method: get
+          path: scrape

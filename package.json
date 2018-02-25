@@ -1,0 +1,45 @@
+{
+    "name": "serverless-puppeteer",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "precommit": "./scripts/check-versions.sh && lint-staged"
+    },
+    "lint-staged": {
+        "*.js": [
+            "node_modules/.bin/eslint",
+            "node_modules/.bin/jest --bail --findRelatedTests"
+        ]
+    },
+    "moduleRoots": [
+        "src"
+    ],
+    "dependencies": {
+        "aws-sdk": "^2.198.0",
+        "babel-runtime": "^6.26.0",
+        "puppeteer": "1.0.0",
+        "tar": "^4.3.3"
+    },
+    "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-plugin-module-resolver": "^3.1.0",
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-stage-3": "^6.24.1",
+        "eslint": "^4.9.0",
+        "eslint-config-airbnb-base": "^12.1.0",
+        "eslint-config-prettier": "^2.9.0",
+        "eslint-plugin-import": "^2.7.0",
+        "eslint-plugin-prettier": "^2.6.0",
+        "husky": "^0.14.3",
+        "jest": "^22.4.2",
+        "lint-staged": "^7.0.0",
+        "prettier": "^1.10.2",
+        "serverless": "1.26.0",
+        "serverless-webpack": "^4.3.0",
+        "webpack": "^3.11.0",
+        "webpack-node-externals": "^1.6.0"
+    }
+}

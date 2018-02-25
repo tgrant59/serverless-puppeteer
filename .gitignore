@@ -1,0 +1,11 @@
+# Misc & IDE files
+.idea/
+.DS_Store
+
+# Project files
+.serverless/
+.webpack/
+node_modules/
+.babel.json
+npm-debug.log.*
+yarn-error.log
