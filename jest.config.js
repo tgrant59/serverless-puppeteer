@@ -2,7 +2,6 @@ module.exports = {
     bail: false,
     collectCoverageFrom: ['src/**/*.js'],
     coverageDirectory: './artifacts/coverage',
-    // modulePaths: ['<rootDir>/src'],
     notify: false,
     rootDir: '.',
     testEnvironment: 'node',
