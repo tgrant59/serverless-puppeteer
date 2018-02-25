@@ -39,7 +39,7 @@ help:
 install: check-versions clean node_modules
 
 .PHONY: package
-build: check-versions node_modules
+package: check-versions node_modules
 	PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true serverless package
 
 .PHONY: run-local
@@ -80,8 +80,12 @@ test-snapshots: check-versions node_modules ${ARTIFACT_DIR}
 .PHONY: install-no-clean
 install-no-clean: check-versions node_modules
 
+.PHONY: install-deployment-deps
+install-deployment-deps: check-versions
+	./scripts/install-deployment-deps.sh
+
 .PHONY: deploy
-deploy:
+deploy: check-versions node_modules
 	./scripts/deploy.sh
 
 # ----------------- Helpers ------------------

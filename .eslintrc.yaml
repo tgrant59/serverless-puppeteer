@@ -4,6 +4,7 @@ env:
 
 extends:
   - airbnb-base/legacy
+  - plugin:jest/recommended
   - plugin:prettier/recommended
 
 parserOptions:
