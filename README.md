@@ -1,4 +1,4 @@
-# serverless puppeteer
+# serverless-puppeteer
 
 Runs Puppeteer on AWS Lambda with Serverless
 
